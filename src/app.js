@@ -11,6 +11,7 @@ const { githubAuth } = require("@hono/oauth-providers/github");
 const { getIronSession } = require("iron-session");
 const layout = require("./layout");
 
+const indexRouter = require("./routes/index");
 const loginRouter = require("./routes/login");
 const logoutRouter = require("./routes/logout");
 
@@ -51,6 +52,7 @@ app.get("/auth/github", async (c) => {
 });
 
 // ルーティング
+app.route("/", indexRouter);
 app.route("/login", loginRouter);
 app.route("/logout", logoutRouter);
 
