@@ -5,15 +5,16 @@ const layout = require("../layout");
 const app = new Hono();
 
 app.get("/", (c) => {
-  const session = c.get("session");
+  const { user } = c.get("session") ?? {};
   return c.html(
     layout(
+      c,
       "Login",
       html`
         <h1>Login</h1>
         <a href="/auth/github">GitHub でログイン</a>
-        ${session.user
-          ? html`<p>現在 ${session.user.login} でログイン中</p>`
+        ${user
+          ? html`<p>現在 ${user.login} でログイン中</p>`
           : ""}
       `,
     ),

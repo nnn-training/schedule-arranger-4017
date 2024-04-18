@@ -7,6 +7,7 @@ const app = new Hono();
 app.get("/", (c) => {
   return c.html(
     layout(
+      c,
       "Home",
       html`
         <h1>Hello, Hono!</h1>

@@ -4,7 +4,7 @@ const app = new Hono();
 
 app.get("/", (c) => {
   const session = c.get("session");
-  session.destroy();
+  session?.destroy();
   return c.redirect("/");
 });
 

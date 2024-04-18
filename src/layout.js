@@ -1,6 +1,6 @@
 const { html } = require("hono/html");
 
-function layout(title, body) {
+function layout(c, title, body) {
   return html`
     <!doctype html>
     <html>
