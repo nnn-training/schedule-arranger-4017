@@ -1,4 +1,4 @@
-FROM postgres:15.2
+FROM postgres:16.1
 RUN apt-get update && \
     apt-get install -y curl
 RUN locale-gen ja_JP.UTF-8
