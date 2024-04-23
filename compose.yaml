@@ -3,13 +3,13 @@ services:
     build: .
     tty: true
     ports:
-      - 8000:8000
+      - 3000:3000
     volumes:
       - .:/app
       - /app/node_modules
     depends_on:
       - db
   db:
-    build: 
+    build:
       context: "."
       dockerfile: "db.Dockerfile"
