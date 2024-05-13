@@ -7,13 +7,13 @@
     "test": "jest --setupFiles dotenv/config"
   },
   "dependencies": {
-    "@hono/node-server": "^1.9.1",
-    "@hono/oauth-providers": "^0.3.2",
-    "hono": "^4.1.5",
-    "iron-session": "^8.0.1"
+    "@hono/node-server": "1.11.0",
+    "@hono/oauth-providers": "0.4.0",
+    "hono": "4.2.7",
+    "iron-session": "8.0.1"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5",
-    "jest": "^29.7.0"
+    "dotenv": "16.4.5",
+    "jest": "29.7.0"
   }
 }
