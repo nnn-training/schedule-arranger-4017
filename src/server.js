@@ -1,5 +1,5 @@
-const { serve } = require("@hono/node-server");
-const app = require("./app");
+const { serve } = require('@hono/node-server');
+const app = require('./app');
 
 const port = 3000;
 console.log(`Server running at http://localhost:${port}/`);

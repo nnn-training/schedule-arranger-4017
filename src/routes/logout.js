@@ -1,11 +1,11 @@
-const { Hono } = require("hono");
+const { Hono } = require('hono');
 
 const app = new Hono();
 
-app.get("/", (c) => {
-  const session = c.get("session");
+app.get('/', (c) => {
+  const session = c.get('session');
   session?.destroy();
-  return c.redirect("/");
+  return c.redirect('/');
 });
 
 module.exports = app;
