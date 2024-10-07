@@ -1,4 +1,4 @@
-const { html } = require("hono/html");
+const { html } = require('hono/html');
 
 function layout(c, title, body) {
   return html`
